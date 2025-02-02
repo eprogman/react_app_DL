@@ -37,10 +37,12 @@
     color: black;
 }
 
+/** contenido de header , main  y footer  */
 .contenedor {
 
-    width: 100%;
-    margin: auto;
+
+    box-sizing: border-box;
+
 
 }
 
@@ -109,7 +111,6 @@
     color: brown;
     font-weight: bold;
 
-
 }
 
 .invalid::after {
@@ -131,20 +132,22 @@
 }
 
 
-.form-contactos {
+/** MAIN contenido de formulario y contactos  en HOME*/
+.main {
     display: grid;
     width: 80%;
     margin: auto;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    margin-bottom: 50px;
+    height: auto;
 }
 
+/** contenido solo formulario */
 .formulario {
     grid-column: 1/3;
     font-size: 1.3em;
-    min-height: 90%;
     text-align: center;
+
 }
 
 .formulario button {
@@ -188,6 +191,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
+    background-color: white;
+
 }
 
 .formulario-post label {
@@ -220,14 +225,13 @@
     color: var(--verde-brillante-oscuro);
 }
 
-
+/** contenido solo contactos  */
 .contactos {
-    grid-column: 3/5;
+    grid-column: 3/4;
     font-size: 1.2em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    margin-top: 0;
     background-color: white;
 }
 
@@ -382,6 +386,10 @@ td {
     padding: 10px;
     background-color: black;
     opacity: 0.5;
+    position: absolute;
+    bottom: -200px;
+    left: 10%;
+
 }
 
 .footer-header {

@@ -84,53 +84,51 @@ export const Home = ({ textoFecha }) => { // recibo la funcion de App, y la ejec
                 </nav>
             </header>
             <main className="main">
-                <section className="form-contactos">
-                    <div className="formulario">
-                        <Outlet />
-                    </div>
-                    <div className="contactos" id="sidebar">
+                <div className="formulario">
+                    <Outlet />
+                </div>
+                <div className="contactos" id="sidebar">
 
-                        <div className="contactos-colum1">
-                            {
-                                datosTable1.length ? datosTable1.map((contact, index) =>
-                                    <div key={index} onClick={setearFechaDesdeHome}>
-                                        <NavLink to={`form/${contact.id}`} className={({ isActive }) => isActive ? "active" : ''}>
-                                            {
-                                                contact.nombre || contact.apellido ? (<p>{`${contact.nombre} ${contact.apellido}`}</p>) : <p><span>Nombre Vacio</span></p>
-                                            }
-                                        </NavLink>
-                                    </div>
-                                ) : <p><span>No Contacts</span></p>
-                            }
-                        </div >
-                        <div className="contactos-colum2">
-                            {
-                                datosTable2.length > 0 ? datosTable2.map((contact, index) =>
-                                    <div key={index + 10} onClick={setearFechaDesdeHome}>
-                                        <NavLink to={`form/${contact.id}`} className={({ isActive }) => isActive ? "active" : ''}>
-                                            {
-                                                contact.nombre || contact.apellido ? (<p>{`${contact.nombre} ${contact.apellido}`}</p>) : <p><span>Nombre Vacio</span></p>
-                                            }
-                                        </NavLink>
-                                    </div>
-                                ) : <p><span>No Contacts</span></p>
-                            }
-                        </div>
-                        <div className="contactos-colum3">
-                            {
-                                datosTable3.length > 0 ? datosTable3.map((contact, index) =>
-                                    <div key={index + 20} onClick={setearFechaDesdeHome}>
-                                        <NavLink to={`form/${contact.id}`} className={({ isActive }) => isActive ? "active" : ''}>
-                                            {
-                                                contact.nombre || contact.apellido ? (<p>{`${contact.nombre} ${contact.apellido}`}</p>) : <p><span>Nombre Vacio</span></p>
-                                            }
-                                        </NavLink>
-                                    </div>
-                                ) : <p><span>No Contacts</span></p>
-                            }
-                        </div>
+                    <div className="contactos-colum1">
+                        {
+                            datosTable1.length ? datosTable1.map((contact, index) =>
+                                <div key={index} onClick={setearFechaDesdeHome}>
+                                    <NavLink to={`form/${contact.id}`} className={({ isActive }) => isActive ? "active" : ''}>
+                                        {
+                                            contact.nombre || contact.apellido ? (<p>{`${contact.nombre} ${contact.apellido}`}</p>) : <p><span>Nombre Vacio</span></p>
+                                        }
+                                    </NavLink>
+                                </div>
+                            ) : <p><span>No Contacts</span></p>
+                        }
+                    </div >
+                    <div className="contactos-colum2">
+                        {
+                            datosTable2.length > 0 ? datosTable2.map((contact, index) =>
+                                <div key={index + 10} onClick={setearFechaDesdeHome}>
+                                    <NavLink to={`form/${contact.id}`} className={({ isActive }) => isActive ? "active" : ''}>
+                                        {
+                                            contact.nombre || contact.apellido ? (<p>{`${contact.nombre} ${contact.apellido}`}</p>) : <p><span>Nombre Vacio</span></p>
+                                        }
+                                    </NavLink>
+                                </div>
+                            ) : <p><span>No Contacts</span></p>
+                        }
                     </div>
-                </section>
+                    <div className="contactos-colum3">
+                        {
+                            datosTable3.length > 0 ? datosTable3.map((contact, index) =>
+                                <div key={index + 20} onClick={setearFechaDesdeHome}>
+                                    <NavLink to={`form/${contact.id}`} className={({ isActive }) => isActive ? "active" : ''}>
+                                        {
+                                            contact.nombre || contact.apellido ? (<p>{`${contact.nombre} ${contact.apellido}`}</p>) : <p><span>Nombre Vacio</span></p>
+                                        }
+                                    </NavLink>
+                                </div>
+                            ) : <p><span>No Contacts</span></p>
+                        }
+                    </div>
+                </div>
             </main>
 
             <Footer />
